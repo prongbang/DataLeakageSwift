@@ -21,12 +21,14 @@ import DataLeakageSwift
 
 class AppDelegate: FlutterAppDelegate {
 
+    private let dataLeakageSwift = DataLeakageSwift()
+
     override func applicationDidBecomeActive(_ application: UIApplication) {
-        DataLeakageSwift.removeBlurScreen()
+        dataLeakageSwift.removeBlurScreen()
     }
 
     override func applicationWillResignActive(_ application: UIApplication) {
-        DataLeakageSwift.blurScreen()
+        dataLeakageSwift.blurScreen()
     }
 }
 ```
